@@ -1,0 +1,14 @@
+html,
+body {
+    height: 100%;
+    background-color: #333;
+}
+
+body {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
+    padding-top: 70px;
+}
+
+a:hover:not(.active) {
+  text-decoration: none;
+}

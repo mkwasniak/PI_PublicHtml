@@ -1,0 +1,12 @@
+[ ] add command to restart homebridge "docker-compose restart homebridge"
+[ ] add colors based on service running status
+[ ] add update "cd /home/pi/homebridge" and "docker-compose pull homebridge"
+[ ] add start deamon "docker-compose up -d" being in the same path as above
+[ ] add part for Mosquitto server with manual page: https://hub.docker.com/_/eclipse-mosquitto?tab=description
+    docker pull eclipse-mosquitto
+    add custom config:  docker run -it -p 1883:1883 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf eclipse-mosquitto
+    add runing command: docker run -it -p 1883:1883 -p 9001:9001 -v mosquitto.conf:/mosquitto/config/mosquitto.conf -v /mosquitto/data -v /mosquitto/log eclipse-mosquitto
+    start command to register --name:  sudo docker run -it --name mosquitto -p 1883:1883 eclipse-mosquitto 
+    then sudo docker stop mosquitto
+    and  sudo docker start mosquitto
+    
