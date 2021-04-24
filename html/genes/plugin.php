@@ -1,6 +1,6 @@
 <?php 
 
-class LIGHTS {
+class GENES {
 
     public $content = '';
     public $style_color = 'default';    

@@ -1,9 +1,9 @@
 <?php
     $CFG = array(
 	'ClassPath'		=> '/var/www/config/',
-	'TemplatePath'		=> '/var/www/templates/',
-    	'PageURL'             	=> 'http://10.0.0.10/',
-        '' 			=> ''
+	'TemplatePath'	=> '/var/www/templates/',
+    'PageURL'       => 'http://10.0.0.10/',
+    '' 			    => ''
     );
 
     $_DB = array(

@@ -1,0 +1,101 @@
+<div class="container-fluid">
+	<div class="alert alert-###alert_color### alert-dismissible" role="alert" ###alert_hidden###>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<strong>###message###
+	</div>
+	<h3>Plan żywieniowy / Lista zakupów</h3>
+
+	<div class="panel-group top-buffer-40" id="accordion" role="tablist" aria-multiselectable="true">
+		<div class="panel panel-default">
+		  <div class="panel-heading" role="tab" id="headingOne">
+			<h4 class="panel-title">
+			  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+				Etap I / Klasyfikacja ręczna
+			  </a>
+			</h4>
+		  </div>
+		  <div id="collapseOne" class="panel-collapse collapse ###panel_phase_1###" role="tabpanel" aria-labelledby="headingOne">
+			<div class="panel-body text-primary">
+				<a href="/dieta/index.php?action=PhaseUpdate&phase=2" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Zakoncz Etap</a>
+				<div class="row top-buffer text-primary">
+					<div class="col-xs-4">###TEMPLATE_dieta_index_text_list_ignored_v2.html###</div>
+					<!-- <div class="col-xs-1"></div> -->
+					<div class="col-xs-4">###TEMPLATE_dieta_index_text_v2.html###</div>
+					<!-- <div class="col-xs-1"></div> -->
+					<div class="col-xs-4">###TEMPLATE_dieta_index_text_list_ingredients_v2.html###</div>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading" role="tab" id="headingTwo">
+			<h4 class="panel-title">
+			  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+				Etap II / Wyszukiwanie składników
+			  </a>
+			</h4>
+		  </div>
+		  <div id="collapseTwo" class="panel-collapse collapse ###panel_phase_2###" role="tabpanel" aria-labelledby="headingTwo">
+			<div class="panel-body">
+				<a href="/dieta/index.php?action=PhaseUpdate&phase=1" class="btn btn-primary"><span class="glyphicon glyphicon-step-backward"></span> Poprzedni Etap</a>
+				<a href="/dieta/index.php?action=PhaseUpdate&phase=3" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span> Zakoncz Etap</a>
+				<div class="row top-buffer text-primary">
+					<div class="col-xs-4">###TEMPLATE_dieta_index_text.html###</div>
+					<div class="col-xs-1"></div>
+					<div class="col-xs-3">###TEMPLATE_dieta_index_text_list_ignored.html###</div>
+					<div class="col-xs-1"></div>
+					<div class="col-xs-3">###TEMPLATE_dieta_index_text_list_ingredients.html###</div>
+				</div>
+			</div>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="headingThree">
+			  <h4 class="panel-title">
+				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseTwo">
+				  Etap III / Lista składników
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseThree" class="panel-collapse collapse ###panel_phase_3###" role="tabpanel" aria-labelledby="headingThree">
+			  	<div class="panel-body">
+				  	<a href="/dieta/index.php?action=PhaseUpdate&phase=2" class="btn btn-primary"><span class="glyphicon glyphicon-step-backward"></span> Poprzedni Etap</a>
+				  	<div class="row top-buffer text-primary">
+					  	<div class="col-xs-2"></div>
+					  	<div class="col-xs-8">	
+						  	<table class="table table-striped">
+								###ingredients_list_in_html###
+							</table>
+						</div>
+						<div class="col-xs-2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading" role="tab" id="headingFour">
+			  <h4 class="panel-title">
+				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+				  Etap 0 / Setup
+				</a>
+			  </h4>
+			</div>
+			<div id="collapseFour" class="panel-collapse collapse ###panel_phase_4###" role="tabpanel" aria-labelledby="headingFour">
+			  	<div class="panel-body">
+				  	<a href="/dieta/index.php?action=PhaseUpdate&phase=1" class="btn btn-success"><span class="glyphicon glyphicon-step-ok"></span> Start Etap I</a>
+				  	<div class="row top-buffer text-primary">
+					  	<div class="col-xs-2"></div>
+					  	<div class="col-xs-8">	
+						  	<table class="table table-striped">
+								###ingredients_list_in_html###
+							</table>
+						</div>
+						<div class="col-xs-2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	###TEMPLATE_dieta_index_form.html###
+</div>
+

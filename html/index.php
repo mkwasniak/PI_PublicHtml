@@ -31,6 +31,7 @@
 
     $TagsFromItemTemplate = $template->GetTagsNames($PluginsItemTemplate,'0');
     $PluginsHTML = '';
+
     foreach($Plugins as $plugin_name => $plugin)
     {
 	// put row tempalte in bufor 

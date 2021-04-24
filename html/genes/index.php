@@ -1,12 +1,11 @@
 <?php 
     $CFG = array(
         'ClassPath'		=> '/var/www/config/',
-        'TemplatePath'	=> '/var/www/html/lights/templates/',
+        'TemplatePath'	=> '/var/www/html/genes/templates/',
         'PageURL'       => 'http://10.0.0.10/',
         '' 			    => ''
     );
 
-    require_once('class/crontab.php');
     require_once($CFG['ClassPath'].'Template.php');
     
 

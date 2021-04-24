@@ -1,14 +1,52 @@
 html,
 body {
-    height: 100%;
-    background-color: #333;
+	height: 100%;
+	background-color: #333;
+	color: #eee;
 }
 
 body {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, .5);
-    padding-top: 70px;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	padding-top: 70px;
 }
 
 a:hover:not(.active) {
-  text-decoration: none;
+	text-decoration: none;
+}
+
+.top-buffer { 
+	margin-top:40px; 
+}
+.top-buffer-10 { 
+	margin-top:10px; 
+}
+.top-buffer-20 { 
+	margin-top:20px; 
+}
+.top-buffer-30 { 
+	margin-top:30px; 
+}
+.top-buffer-40 { 
+	margin-top:40px; 
+}
+
+.table-100 {
+	max-height: 100px;
+	overflow-y: scroll;
+}
+.table-250 {
+	max-height: 250px;
+	overflow-y: scroll;
+}
+.table-500 {
+	max-height: 500px;
+	overflow-y: scroll;
+}
+.table-1000 {
+	max-height: 1000px;
+	overflow-y: scroll;
+}
+.pointer:hover {
+	cursor: pointer;
+	background-color: #d9edf7;
 }
