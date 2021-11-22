@@ -7,13 +7,16 @@
     );
 
     require_once('class/tree.php');
-    require_once('class/tree_core.php');
-    require_once('class/tree_person.php');
     require_once($CFG['ClassPath'].'Template.php');
-    
+
+	if ($_POST != NULL) {
+//		var_dump($_POST); 
+		$_GET['message'] = 'Dodano osobe';
+		$_GET['ok_code'] = 0;
+	}
 
     $template = new Template($CFG['TemplatePath']);
-    $template->Start('index.html');
+    $template->Start('add_person.html');
   
     #region ok_code and message return
     // if(isset($_POST['submit'])) {    $Crontab->submit_handle($_POST['submit']);   }
@@ -39,10 +42,9 @@
 
     $Tree = new Tree();
 
-
-    $template->SetTagValue("nodes_html", $Tree->nodes_in_html());
-    $template->SetTagValue("family_tree",$Tree->html_generate_family_tree());
-    
+    $template->SetTagValue("select_fatherID",$Tree->html_select_get_persons_all());
+    $template->SetTagValue("select_motherID",$Tree->html_select_get_persons_all());
+    $template->SetTagValue("select_partnerID",$Tree->html_select_get_persons_all());
 
     $template->ReplaceTags();
     $template->ReplaceAllTags();

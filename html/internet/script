@@ -1,0 +1,9 @@
+#!/bin/bash
+
+wget -q --spider http://vodafone.de
+
+if [ $? -eq 0 ]; then
+    echo "Online" > /var/www/html/internet/script_result
+else
+    echo "Offline" > /var/www/html/internet/script_result
+fi

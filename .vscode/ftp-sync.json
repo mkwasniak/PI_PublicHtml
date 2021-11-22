@@ -1,6 +1,6 @@
 {
     "remotePath": "/var/www/",
-    "host": "10.0.0.10",
+    "host": "10.0.10.10",
     "username": "pi",
     "password": "Loyd1982",
     "port": 21,

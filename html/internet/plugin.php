@@ -1,17 +1,25 @@
 <?php 
 
-class GENES {
+//template plugin --- change class name and all references
+
+class INTERNET {
 
     public $content = '';
-    public $style_color = 'default';    
+    public $style_color = 'default';     
 
     public function get_content()
     {
-
-		$this->content = 'Last entry: ...';
-		$this->style_color = 'success';
-
-	}
+		$test = file_get_contents("/var/www/html/internet/script_result");
+		$test = trim($test);
+		$this->content = $test;
+		if ($test == "Online") {
+			$this->style_color = 'success';
+		}
+		else
+		{
+			$this->style_color = 'danger';
+		}
+    }
 
     //need to create class from variable
     public function __construct(){

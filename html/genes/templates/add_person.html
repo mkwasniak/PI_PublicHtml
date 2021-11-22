@@ -1,0 +1,108 @@
+###TEMPLATE_index_header.html###
+###TEMPLATE_menu.html###
+<div class="container">
+
+	<div class="alert alert-###alert_color### alert-dismissible" role="alert" ###alert_hidden###>
+		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<strong>###message###
+	</div>
+
+
+	<form action="add.php" method="POST">
+		<div class="form-row">
+			<div class="form-group col-md-4">
+				<label for="first_name">First name</label>
+			  <input type="text" class="form-control" name="first_name" placeholder="First name">
+			</div>
+			<div class="form-group col-md-4">
+				<label for="middle_name">Middle name</label>
+			  <input type="text" class="form-control" name="middle_name" placeholder="Middle name">
+			</div>
+			<div class="form-group col-md-4">
+				<label for="nick_name">Nick name</label>
+			  <input type="text" class="form-control" name="nick_name" placeholder="Nick name">
+			</div>
+		</div>
+  
+		<div class="form-row">
+			<div class="form-group col-md-6">
+				<label for="last_name">Last name</label>
+				<input type="text" class="form-control" name="last_name" placeholder="Last name">
+			</div>
+			<div class="form-group col-md-6">
+				<label for="maiden_name">Maiden name</label>
+				<input type="text" class="form-control" name="maiden_name" placeholder="Maiden name">
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="form-group col-md-2">
+			  <label for="fatherID">Father personal ID</label>
+			  <select name="fatherID" class="form-control">
+				###select_fatherID###
+			  </select>
+			  </div>
+			<div class="form-group col-md-2">
+			  <label for="motherID">Mother personal ID</label>
+			  <select name="motherID" class="form-control">
+				###select_motherID###
+			  </select>
+			</div>
+			<div class="form-group col-md-2">
+				<label for="partnerID">Partner personal ID</label>
+				<select name="partnerID" class="form-control">
+				  ###select_partnerID###
+				</select>
+				</div>
+			<div class="form-group col-md-2" id='birth_date_picker'>
+				<label for="birth_date">Birth date</label>
+				<input type="text" class="form-control" name="birth_date" placeholder="1900.01.01">
+				<!-- <span class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+				</span> -->
+			</div>
+			<!-- <script type="text/javascript">
+				$(function () {
+					$('#birth_date_picker').datetimepicker();
+				});
+			 </script> -->
+	   
+			<div class="form-group col-md-2">
+				<label for="inputPassword4">Death date</label>
+				<input type="text" class="form-control" name="death_date" placeholder="1900.01.01">
+			</div>
+		</div>
+
+		<!-- Adress, to be implemented -->
+		<div class="form-group col-md-12">
+		  <label for="inputAddress">Address</label>
+		  <input type="text" class="form-control" name="inputAddress" placeholder="1234 Main St" disabled>
+		</div>
+		<div class="form-group col-md-12">
+		  <label for="inputAddress2">Address 2</label>
+		  <input type="text" class="form-control" name="inputAddress2" placeholder="Apartment, studio, or floor" disabled>
+		</div>
+		<div class="form-row">
+		  <div class="form-group col-md-6">
+			<label for="inputCity">City</label>
+			<input type="text" class="form-control" name="inputCity" disabled>
+		  </div>
+		  <div class="form-group col-md-4">
+			<label for="inputState">State</label>
+			<select name="inputState" class="form-control" disabled>
+			  <option selected>Choose...</option>
+			  <option>...</option>
+			</select>
+		  </div>
+		  <div class="form-group col-md-2">
+			<label for="inputZip">Zip</label>
+			<input type="text" class="form-control" name="inputZip" disabled>
+		  </div>
+		</div>
+
+		<div class="form-row col-md-12">
+			<button type="submit" value="add_person" name="add_person" class="btn btn-primary">Add person</button>
+		</div>
+	</form>
+</div>
+###TEMPLATE_index_footer.html###

@@ -1,15 +1,52 @@
+<h3>Family tree</h3>
+<div>
+	<svg width="100%" height="800">
+		<!-- Definicja wypelnienia gradientu -->
+		<defs>
+			<linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+				<stop offset="0%" style="stop-color:rgb(100, 100, 100);stop-opacity:1" />
+				<stop offset="100%" style="stop-color:rgb(50, 50, 50);stop-opacity:1" />
+			</linearGradient>
+		</defs>	
+	###family_tree###
+	</svg>
+</div>
+
+<div id="tree"/>
+
 <div class="container">
 	<div class="alert alert-###alert_color### alert-dismissible" role="alert" ###alert_hidden###>
 		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 		<strong>###message###
 	</div>
 
-	<h3>Lights On/Off Scheduler</h3>
-	###crontab_html###
-	###gen_crontab_html###
 
-	###TEMPLATE_schedule_table.html###
+
+	<!-- ###crontab_html###
+	###gen_crontab_html### -->
+
 </div>
+
+<script>
+        var chart = new OrgChart(document.getElementById("tree"), {
+            template: "luba",    
+            enableSearch: false,
+			mouseScrool: OrgChart.action.none,
+			orientation: OrgChart.orientation.bottom,
+            nodeBinding: {
+                field_0: "name",
+                field_1: "title",
+                img_0: "img"
+            },
+            nodes: [
+				// ###nodes_html###
+				// {id: 100, pid: 3, name: "Janina", tags: ["partner"]},
+				// {id: 102, pid: 3, name: "Janina", tags: ["partner"]},
+				// {id: 103, pid: 100, name: "Janina", tags: ["partner"]},
+            ]
+        });   
+</script>
+
 
 <!-- <script type="text/javascript">
 	window.setTimeout(function() {
