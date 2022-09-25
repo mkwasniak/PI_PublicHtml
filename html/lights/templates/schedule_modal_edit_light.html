@@ -1,0 +1,41 @@
+  <!-- Modal EditLight-->
+  	<div class="modal fade" id="EditLight" tabindex="-1" role="dialog" aria-labelledby="myModalEditLight" style="font-weight: normal; text-shadow: none;">
+	<!-- <div class="" id="AddLight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="font-weight: normal; text-shadow: none;"> -->
+		<div class="modal-dialog" role="document">
+	  		<div class="modal-content text-primary">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="AddLightTitle">Edit light in schedule</h4>
+				</div>
+				<form method="POST">
+					<div class="modal-body">
+						<input type="hidden" class="form-control" id="schedule-edit-id" name="r[input_id]">
+						<div class="form-horizontal">
+							<div class="form-group">
+								<label class="control-label col-sm-3">Light name:</label>
+								<div class="col-sm-9">
+									<input type="text" class="form-control" name="r[input_lightname]" value="JS Script did not work properly" id="schedule-edit-lightname" disabled>
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="schedule-edit-timeon" class="control-label col-sm-3">Time start on:</label>
+								<div class="col-sm-3">
+									<input type="text" class="form-control" id="schedule-edit-timeon" name="r[input_timeon]" value="JS script ...">
+								</div>
+								<label for="schedule-edit-timeoff" class="ontrol-label col-sm-3">Time start off:</label>
+								<div class="col-sm-3">
+									<input type="text" class="form-control" id="schedule-edit-timeoff" name="r[input_timeoff]" value="JS script ...">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="submit" class="btn btn-primary" name="submit" value="EditLight"><span class="glyphicon glyphicon-save"></span> Save</button>
+					</div>
+				</form>
+			</div>
+		</div>
+  	</div>
+
+<!-- Replacement of the ID and other input values from the button is done in the footer template in java script  -->

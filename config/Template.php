@@ -249,8 +249,10 @@
                         
     function SetTagValue($TagName,$Value)
     {
+//        var_dump($this->Replace);
          if (!isset($this->Replace[$TagName])) {  $this->Replace[$TagName] = $Value; }
-         else if ($this->Replace[$TagName] == '') {  $this->Replace[$TagName] = $Value; }
+         else {  $this->Replace[$TagName] = $Value; }
+//         else if ($this->Replace[$TagName] == '') {  $this->Replace[$TagName] = $Value; }
          return TRUE;
     }
 

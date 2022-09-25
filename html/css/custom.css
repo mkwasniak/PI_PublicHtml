@@ -14,38 +14,46 @@ a:hover:not(.active) {
 	text-decoration: none;
 }
 
-.top-buffer { 
-	margin-top:40px; 
+.top-buffer {
+	margin-top: 40px;
 }
-.top-buffer-10 { 
-	margin-top:10px; 
+
+.top-buffer-10 {
+	margin-top: 10px;
 }
-.top-buffer-20 { 
-	margin-top:20px; 
+
+.top-buffer-20 {
+	margin-top: 20px;
 }
-.top-buffer-30 { 
-	margin-top:30px; 
+
+.top-buffer-30 {
+	margin-top: 30px;
 }
-.top-buffer-40 { 
-	margin-top:40px; 
+
+.top-buffer-40 {
+	margin-top: 40px;
 }
 
 .table-100 {
 	max-height: 100px;
 	overflow-y: scroll;
 }
+
 .table-250 {
 	max-height: 250px;
 	overflow-y: scroll;
 }
+
 .table-500 {
 	max-height: 500px;
 	overflow-y: scroll;
 }
+
 .table-1000 {
 	max-height: 1000px;
 	overflow-y: scroll;
 }
+
 .pointer:hover {
 	cursor: pointer;
 	background-color: #d9edf7;

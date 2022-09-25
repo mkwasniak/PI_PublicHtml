@@ -1,24 +1,27 @@
-<div class="panel panel-default text-primary">
-	<div class="panel-heading">
-		DB Actions
-		<button type="button" class="btn btn-default" type="submit" value="Submit">Edit <span class="glyphicon glyphicon-pencil"></span></button>
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+		  <h3 class="panel-title"><span class="glyphicon glyphicon-off"></span> Scheduling</h3>
+		</div>
+		<div class="text-primary">
+			<table class="table table-striped" style="font-weight: normal; text-shadow: none;">
+				<tr>
+					<th>ID</th>
+					<th>Light Name</th>
+					<th>Mon</th>
+					<th>Tue</th>
+					<th>Wed</th>
+					<th>Thu</th>
+					<th>Fri</th>
+					<th>Sat</th>
+					<th>Sun</th>
+					<th>Time ON</th>
+					<th>Time OFF</th>
+					<th>MQTT Topic</th>
+					<th>Group</th>
+					<th>Active</th>
+				</tr>
+				###schedule_rows###
+			</table>			
+		</div>
 	</div>
-	<table class="table table-striped">
-		<tr>
-			<td>ID</td>
-			<td>Light Name</td>
-			<td>Mon</td>
-			<td>Tue</td>
-			<td>Wed</td>
-			<td>Thu</td>
-			<td>Fri</td>
-			<td>Sat</td>
-			<td>Sun</td>
-			<td>Time ON</td>
-			<td>Time OFF</td>
-			<td>MQTT Topic</td>
-			<td>Active</td>
-		</tr>
-		###schedule_rows###
-	</table>	
-</div>

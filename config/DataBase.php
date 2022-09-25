@@ -252,7 +252,7 @@ var $query_history= array();
 
    	    $this->DB_last_query = $Query;
 	    array_push($this->query_history, $Query);
-	    $result = mysql_query ($Query, $this->DB_handle);
+	    $result = mysqli_query ($this->DB_handle, $Query);
 	    if($this->DBError() && $this->ErrHandle->Debug)
 	    {
 		var_dump($this->DB_last_query);
@@ -261,7 +261,7 @@ var $query_history= array();
 	    }
 	    else
 	    {
-	    return $result;
+                return $result;
 	    }
 	          
         } 
@@ -275,18 +275,18 @@ var $query_history= array();
             global $ErrHandle;
 
             if ($this->DB_CONFIG  != 1) return FALSE;
+
 		if($this->DB_port)
 		{
-		$this->DB_handle = @mysql_connect ($this->DB_host.':'.$this->DB_port, $this->DB_user, $this->DB_password);                                   
+	        	$this->DB_handle = @mysql_connect ($this->DB_host.':'.$this->DB_port, $this->DB_user, $this->DB_password);                                   
 		}
 		else
 		{
-            $this->DB_handle = @mysql_connect ($this->DB_host, $this->DB_user, $this->DB_password);                                   
-		}
-		
+                   $this->DB_handle = @mysqli_connect ($this->DB_host, $this->DB_user, $this->DB_password);    
+                }
 	        if ($this->DBError()) { return FALSE; }
 
-	        if (@!mysql_select_db ($this->DB_name, $this->DB_handle))
+                if (@!mysqli_select_db($this->DB_handle, $this->DB_name))
 	        {
 	        return false;
         	}
@@ -337,7 +337,7 @@ var $query_history= array();
 	function DBFetchRow($Result)
 	{
                 if ($this->DB_CONFIG  != 1 || $Result == '') return FALSE;
-		return @mysql_fetch_row($Result);
+		return @mysqli_fetch_row($Result);
 	}
 
 	/**
@@ -484,8 +484,8 @@ var $query_history= array();
         function DBError() { 
 
        	    global $ErrHandle;
-       	    if ($this->DB_handle) { $Comment = @mysql_error($this->DB_handle); } 
-       	    else { $Comment = @mysql_error(); }
+       	    if ($this->DB_handle) { $Comment = @mysqli_error($this->DB_handle); } 
+       	    else { $Comment = @mysqli_error(); }
             if ($Comment =='') { return FALSE; }  
             $ErrHandle->Error(substr(__FILE__,strlen(getenv("DOCUMENT_ROOT")))."(".__LINE__.")","DB Error: ".$Comment);
             $ErrHandle->Debug($Comment." ".$this->DB_last_query);     

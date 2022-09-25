@@ -1,15 +1,30 @@
 	<tr>
 		<td>###id###</td>
 		<td>###light_name###</td>
-		<td><a href="###monday_switch_link###" 		class="btn btn-###btn_color_monday### btn-xs">###monday###</a></td>
-		<td><a href="###tuesday_switch_link###" 	class="btn btn-###btn_color_tuesday### btn-xs">###tuesday###</a></td>
+		<td><a href="###monday_switch_link###" 		class="btn btn-###btn_color_monday### btn-xs"	>###monday###</a></td>
+		<td><a href="###tuesday_switch_link###" 	class="btn btn-###btn_color_tuesday### btn-xs"	>###tuesday###</a></td>
 		<td><a href="###wednesday_switch_link###" 	class="btn btn-###btn_color_wednesday### btn-xs">###wednesday###</a></td>
-		<td><a href="###thursday_switch_link###" 	class="btn btn-###btn_color_thursday### btn-xs">###thursday###</a></td>
-		<td><a href="###friday_switch_link###" 		class="btn btn-###btn_color_friday### btn-xs">###friday###</a></td>
-		<td><a href="###saturday_switch_link###" 	class="btn btn-###btn_color_saturday### btn-xs">###saturday###</a></td>
-		<td><a href="###sunday_switch_link###" 		class="btn btn-###btn_color_sunday### btn-xs">###sunday###</a></td>
-		<td><a href="###time_on_switch_link###" 	class="btn btn-###btn_color_time_on### btn-xs">###time_on###</a></td>
-		<td><a href="###time_off_switch_link###" 	class="btn btn-###btn_color_time_off### btn-xs">###time_off###</a></td>
+		<td><a href="###thursday_switch_link###" 	class="btn btn-###btn_color_thursday### btn-xs"	>###thursday###</a></td>
+		<td><a href="###friday_switch_link###" 		class="btn btn-###btn_color_friday### btn-xs"	>###friday###</a></td>
+		<td><a href="###saturday_switch_link###" 	class="btn btn-###btn_color_saturday### btn-xs"	>###saturday###</a></td>
+		<td><a href="###sunday_switch_link###" 		class="btn btn-###btn_color_sunday### btn-xs"	>###sunday###</a></td>
+		<td><a href="###time_on_switch_link###" 	class="btn btn-###btn_color_time_on### btn-xs"	>###time_on###</a></td>
+		<td><a href="###time_off_switch_link###" 	class="btn btn-###btn_color_time_off### btn-xs"	>###time_off###</a></td>
 		<td>###mqtt_topic###</td>
-		<td><a href="###active_switch_link###" 		class="btn btn-###btn_color_active### btn-xs">###active###</a></td>
+		<td><span                                	class=""                                     	>###group_name###</span></td>
+		<td><a href="###active_switch_link###" 		class="btn btn-###btn_color_active### btn-xs"	>###active###</a></td>
+		<td><form method="post">
+				<div class="btn-group" role="group" aria-label="Schedule Action buttons">
+				<!-- <input type="hidden" name="dummy" value="dummy"/> -->
+					<button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#EditLight"
+						data-whatever1="###id###" 
+						data-whatever2="###light_name###" 
+						data-whatever3="###time_on###" 
+						data-whatever4="###time_off###"><span class="glyphicon glyphicon-pencil"></span></button>
+					<button type="submit" class="btn btn-default btn-xs" name="submit" value="MoveUpLight_###id###"><span class="glyphicon glyphicon-arrow-up"></span></button>
+					<button type="submit" class="btn btn-default btn-xs" name="submit" value="MoveDownLight_###id###"><span class="glyphicon glyphicon-arrow-down"></span></button>
+					<button type="submit" class="btn btn-default btn-xs" name="submit" value="DeleteLight_###id###"><span class="glyphicon glyphicon-remove"></span></button>
+				</div>
+			</form>
+		</td>
 	</tr>

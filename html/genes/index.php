@@ -2,7 +2,7 @@
     $CFG = array(
         'ClassPath'		=> '/var/www/config/',
         'TemplatePath'	=> '/var/www/html/genes/templates/',
-        'PageURL'       => 'http://10.0.0.10/',
+        'PageURL'       => 'http://raspberrypi/',
         '' 			    => ''
     );
 

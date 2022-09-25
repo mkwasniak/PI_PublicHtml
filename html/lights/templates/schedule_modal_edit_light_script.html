@@ -1,0 +1,15 @@
+<!-- Replace input values from edit light modal -->
+<script>
+	$('#EditLight').on('show.bs.modal', function (event) {
+		var button = $(event.relatedTarget) 
+		var id = button.data('whatever1')
+		var lightName = button.data('whatever2')
+		var timeon = button.data('whatever3')
+		var timeoff = button.data('whatever4')
+		var modal = $(this)
+		modal.find('.modal-body #schedule-edit-id').val(id)
+		modal.find('.modal-body #schedule-edit-lightname').val(lightName)
+		modal.find('.modal-body #schedule-edit-timeon').val(timeon)
+		modal.find('.modal-body #schedule-edit-timeoff').val(timeoff)
+	});
+</script>
